@@ -30,7 +30,7 @@ export default function RootLayout({
         <SessionProvider>
           <Navbar />
 
-          <div className="">
+          <div className="container">
             {children}
           </div>
         </SessionProvider>
