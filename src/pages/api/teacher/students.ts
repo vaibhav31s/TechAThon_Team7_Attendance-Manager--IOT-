@@ -45,6 +45,8 @@ const getStudentsByDate = async (req: NextApiRequest, res: NextApiResponse) => {
             email:true
           }
         }
+       
+
       },
       where: {
         date:{
