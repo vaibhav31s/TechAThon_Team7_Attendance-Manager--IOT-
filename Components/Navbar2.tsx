@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useSession , signOut} from "next-auth/react";
 import { useRouter } from "next/navigation";
 // import Logo from "../assets/logo.png";
+import Logo from "public/attendaceLogo.png";
 type Props = {
 };
 
@@ -83,9 +84,9 @@ const Navbar = (props: Props) => {
       >
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Nav.Brand href="/" className="flex items-center cursor-pointer">
-            <img  className="h-6 mr-3 sm:h-9" alt="Logo" />
+            <img  className="h-16   mr-3 sm:h-9" alt="Logo"  src={Logo.src}/>
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Attendance Manager
+              QuickCheck Deck
             </span>
           </Nav.Brand>
 

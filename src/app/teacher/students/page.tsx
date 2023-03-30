@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "flowbite";
 
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+
 
 import Loading from "./loading";
 type Props = {};
@@ -65,7 +64,7 @@ const MyBlogs = (props: Props) => {
           <input type="text" />
           <div className="flex flex-col ">
             <h1>Start Date</h1>
-            <DatePicker
+            {/* <DatePicker
               selected={startDate}
               onChange={(date: React.SetStateAction<Date>) =>
                 setStartDate(date)
@@ -75,7 +74,7 @@ const MyBlogs = (props: Props) => {
             <DatePicker
               selected={endDate}
               onChange={(date: React.SetStateAction<Date>) => setendDate(date)}
-            />
+            /> */}
           </div>
             <button onClick={()=>submitHandler()}>Get Data</button>
         </div>

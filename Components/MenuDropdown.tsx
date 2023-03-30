@@ -39,7 +39,7 @@ const MenuDropdown = (props: Props) => {
             <span className="sr-only">Open user menu</span>
             <img
               className="w-8 h-8 rounded-full"
-              src={data.avatar + ".svg"}
+              src={data.avatar}
               alt="user photo"
             />
           </button>

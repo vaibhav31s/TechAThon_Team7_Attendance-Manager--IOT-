@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useSession, signOut } from "next-auth/react";
+import Landing from "@/Components/Landing";
 import { useRouter } from "next/navigation";
 // import Landing from "@/Components/Landing";
 type Props = {};
@@ -26,7 +27,7 @@ const Hello = (props: Props) => {
     );
   }
   return <div>
-    <h1>Hello</h1>
+      <Landing/>
     </div>;
 };
 

@@ -9,6 +9,18 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@date-io/core@^2.16.0":
+  version "2.16.0"
+  resolved "https://registry.npmjs.org/@date-io/core/-/core-2.16.0.tgz"
+  integrity sha512-DYmSzkr+jToahwWrsiRA2/pzMEtz9Bq1euJwoOuYwuwIYXnZFtHajY2E6a1VNVDc9jP8YUXK1BvnZH9mmT19Zg==
+
+"@date-io/date-fns@^2.16.0":
+  version "2.16.0"
+  resolved "https://registry.npmjs.org/@date-io/date-fns/-/date-fns-2.16.0.tgz"
+  integrity sha512-bfm5FJjucqlrnQcXDVU5RD+nlGmL3iWgkHTq3uAZWVIuBu6dDmGa3m8a6zo2VQQpu8ambq9H22UyUpn7590joA==
+  dependencies:
+    "@date-io/core" "^2.16.0"
+
 "@emotion/is-prop-valid@^0.8.2":
   version "0.8.8"
   resolved "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz"
@@ -505,6 +517,11 @@ d3@3.5.17:
   version "3.5.17"
   resolved "https://registry.npmjs.org/d3/-/d3-3.5.17.tgz"
   integrity sha512-yFk/2idb8OHPKkbAL8QaOaqENNoMhIaSHZerk3oQsECwkObkCpJyjYwCe+OHiq6UEdhe1m8ZGARRRO3ljFjlKg==
+
+date-fns@^2.0.0-beta.5:
+  version "2.0.0-beta.5"
+  resolved "https://registry.npmjs.org/date-fns/-/date-fns-2.0.0-beta.5.tgz"
+  integrity sha512-GS5yi964NDFNoja9yOdWFj9T97T67yLrUeJZgddHaVfc/6tHWtX7RXocuubmZkNzrZUZ9BqBOW7jTR5OoWjJ1w==
 
 date-fns@^2.0.1, date-fns@^2.24.0:
   version "2.29.3"
@@ -1334,7 +1351,7 @@ react-popper@^2.2.5, react-popper@^2.3.0:
 
 react-uploader@^3.13.0:
   version "3.13.0"
-  resolved "https://registry.yarnpkg.com/react-uploader/-/react-uploader-3.13.0.tgz#7a8deee11246f33cdc2614da001ff83e980a2406"
+  resolved "https://registry.npmjs.org/react-uploader/-/react-uploader-3.13.0.tgz"
   integrity sha512-DAkeApJWfyU+7UZA/Pmr4mWf4jhUWoEmkwu1/6VoHL5hS4i6TisRQzHyiZf4YiMS01oAS22Q+Bj4UWv+LEx4gw==
   dependencies:
     uploader "^3.12.0"

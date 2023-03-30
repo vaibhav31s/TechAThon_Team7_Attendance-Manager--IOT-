@@ -16,6 +16,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
 
   return (
     <html lang="en" className={roboto.className}>
@@ -28,7 +29,8 @@ export default function RootLayout({
       <body>
         <SessionProvider>
           <Navbar />
-          <div className="container">
+
+          <div className="">
             {children}
           </div>
         </SessionProvider>
