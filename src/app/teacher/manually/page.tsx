@@ -1,0 +1,84 @@
+
+'use client'
+import React from 'react'
+
+type Props = {}
+
+
+
+const Manually = (props: Props) => {
+
+    const [date, setDate] = React.useState(new Date().toISOString().slice(0, 16))
+    const [subject, setSubject] = React.useState('DMBI')
+    const [rollno, setRollNo] = React.useState('')
+    const [status, setStatus] = React.useState('present')
+
+    const onSubmitHandler = () => {
+        // console.log(date, subject, rollno, status)
+        fetch('/api/teacher/manual', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                date,
+                subject,
+                rollno,
+                status
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        }
+        )
+    }
+
+  return (
+    <div className="container mx-auto">
+    <div className="max-w-md mx-auto mt-8 bg-white p-8 rounded-lg shadow-md">
+      <div className="mb-4">
+        <label htmlFor="date" className="block text-gray-700 font-bold mb-2">Date:</label>
+        <input type="datetime-local" id="date" name="date" value={date} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        onChange={(e)=>{setDate(e.target.value)}}/>
+      </div>
+      <label htmlFor="date" className="block text-gray-700 font-bold mb-2">Subject:</label>
+      <select  value={subject} onChange={(e)=>{setSubject(e.target.value)}}
+        id="status" name="status" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <option value="DMBI">DMBI</option>
+          <option value="AIDS">AIDS</option>
+          <option value="WEBX">WEBX</option>
+          <option value="WT">WT</option>
+          
+        </select>
+     
+      <div className="mb-4">
+        <label htmlFor="studentId" className="block text-gray-700 font-bold mb-2">Roll no :</label>
+        <input type="text" id="studentId" name="rollno" value={rollno} onChange={(e)=>{setRollNo(e.target.value)}}
+         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+      </div>
+      <div className="mb-4">
+        <label htmlFor="status" className="block text-gray-700 font-bold mb-2">Status:</label>
+        <select  value={status} onChange={(e)=>{setStatus(e.target.value)}}
+        id="status" name="status" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <option value="present">Present</option>
+          <option value="absent">Absent</option>
+        </select>
+      </div>
+      <div className='flex justify-center items-center'>
+      <button type="button"
+        onClick={()=>onSubmitHandler()}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+      </div>
+      
+    </div>
+    { date }
+    { subject }
+    { rollno }
+    { status }
+
+  </div>
+  )
+}
+
+export default Manually

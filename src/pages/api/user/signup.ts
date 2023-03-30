@@ -7,6 +7,8 @@ const signup = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { email, password, name, avatar, role } = req.body;
     console.log(email, password, name, avatar, role);
+    const roll = "1000";
+
     const user = await prisma.user.findUnique({
       where: {
         // @ts-ignore
@@ -29,6 +31,7 @@ const signup = async (req: NextApiRequest, res: NextApiResponse) => {
           name: name,
           avatar: avatar,
           role: role,
+          rollno: roll,
         },
       });
       res.status(200).json(newUser);
