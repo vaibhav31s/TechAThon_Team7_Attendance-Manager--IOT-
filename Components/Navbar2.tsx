@@ -84,7 +84,7 @@ const Navbar = (props: Props) => {
       >
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Nav.Brand href="/" className="flex items-center cursor-pointer">
-            <img  className="h-16   mr-3 sm:h-9" alt="Logo"  src={Logo.src}/>
+            <img  className="h-6  mr-3 sm:h-9" alt="Logo"  src={Logo.src}/>
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               QuickCheck Deck
             </span>
