@@ -20,7 +20,7 @@ const TeacherDashboard = (props: Props) => {
     hoverLabelXColor: "palevioletred",
   };
   return (
-    <div className="container">
+    <div>
       <div className="flex flex-col  2xl:w-2/3">
         <div className="flex-1  rounded-lg shadow-xl mt-4 px-2 pt-2">
           <h4 className="text-xl text-gray-900 dark:text-white font-bold ">

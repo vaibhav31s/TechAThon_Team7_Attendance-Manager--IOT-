@@ -11,6 +11,7 @@ interface User {
   image?: string;
   role?: string;
   rollno?: string;
+  avatar?: string;
 }
 
 const StudentHome = (props: Props) => {
@@ -42,14 +43,14 @@ const StudentHome = (props: Props) => {
   return (
     <div className="justify-center items-center ">
       <div className="flex flex-col items-center ">
-        <Image
+        <img
           src={
-            "https://api.multiavatar.com/demo" + session?.user?.name + ".svg"
+            datas.avatar
           }
           className="w-40 border-4 border-white rounded-full"
           width={40}
-          height={100}
-          alt={`Product `}
+          height={40}
+          alt={`Product`}
         />
         <div className="flex items-center space-x-2 mt-2">
           <p className="text-2xl dark:text-white">{datas.name}</p>
