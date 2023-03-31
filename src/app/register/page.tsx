@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import {BsCloudUpload} from 'react-icons/bs';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { BsCloudUpload } from "react-icons/bs";
 import { useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import Link from "next/link";
@@ -15,28 +15,28 @@ import { UploadButton } from "react-uploader";
 type Props = {};
 // Initialize once (at the start of your app).
 
-const uploader = Uploader({ apiKey: "free" });
+const uploader = Uploader({ apiKey: "public_FW25bBHGfjRJvijkVVMjBhDDv2sb" });
 const options = {
   multi: false,
+
   styles: {
     colors: {
-      primary: "#377dff"
-    }
-  }
-}
+      primary: "#377dff",
+    },
+    
+  },
+};
 const Register = (props: Props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("https://api.multiavatar.com/vaibhav");
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState("user");
   const [rollno, setRollno] = useState("");
-  const images:string[] = [];
+  const images: string[] = [];
 
-
-  const submitHandlerRegister =  () => {
-   
+  const submitHandlerRegister = () => {
     try {
       const signup = fetch("/api/user/signup", {
         method: "POST",
@@ -45,26 +45,29 @@ const Register = (props: Props) => {
         },
         body: JSON.stringify({
           name,
-          email, 
-          password, 
+          email,
+          password,
           avatar,
           role,
           rollno,
         }),
       }).then((res) => {
         if (res.status === 200) {
-          toast.success('Thank you for registering with us! You can sign it using your creadentials or Google auth!!', {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
+          toast.success(
+            "Thank you for registering with us! You can sign it using your creadentials or Google auth!!",
+            {
+              position: "bottom-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            }
+          );
         } else {
-          toast.error('Three is issue between your Password Or Email!', {
+          toast.error("Three is issue between your Password Or Email!", {
             position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -76,8 +79,7 @@ const Register = (props: Props) => {
           });
         }
       });
-      
-     
+
       console.log(signup);
       // toast.success('Thank you for registering with us! You can sign it using your creadentials or Google auth!!', {
       //   position: "bottom-center",
@@ -89,16 +91,13 @@ const Register = (props: Props) => {
       //   progress: undefined,
       //   theme: "light",
       //   });
-
     } catch (error) {
       console.log(error);
     }
   };
 
-
   const submitHandler = async (e: any) => {
-
-    const [files, setFiles] = useState([])  
+    const [files, setFiles] = useState([]);
 
     const n = name.split(" ");
     setAvatar("https://api.multiavatar.com/" + n[0]);
@@ -110,49 +109,53 @@ const Register = (props: Props) => {
         avatar,
         role,
       });
-     
-    } catch (error) {
-     
-    }
+    } catch (error) {}
   };
 
   const { data, status } = useSession();
   const router = useRouter();
 
   async function handleGoogleSignIn() {
-    signIn("google", {
-      callbackUrl: "http://localhost:3000/"
-    }, { role: role });
+    signIn(
+      "google",
+      {
+        callbackUrl: "http://localhost:3000/",
+      },
+      { role: role }
+    );
   }
 
   if (status === "authenticated") {
-    if(data?.user?.role === "admin"){
+    if (data?.user?.role === "admin") {
       router.push("/teacher");
     }
-    if(data?.user?.role === "user"){
+    if (data?.user?.role === "user") {
       router.push("/student");
     }
     router.push("/");
   }
 
   return (
-    <section className="bg-purple-900 dark:bg-black ">
+    <section className="">
       <div className="px-0 mx-auto py-1 max-w-7xl sm:px-4">
-      <ToastContainer
-position="bottom-center"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+        <h1 className="text-4xl antialiased font-bold dark:text-white text-center">
+              Welcome to QuickCheck Tech
+            </h1>
         <div className="w-full px-4 pt-5 pb-6 mx-auto mt-8 mb-6 bg-white rounded-none shadow-xl sm:rounded-lg sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12 sm:px-6">
           <h1 className="mb-4 text-lg font-semibold text-left text-gray-900">
-            Log in to your account
+            Registration Page of QuickCheck Tech 
           </h1>
           <div className="mb-8 space-y-4">
             <label className="block">
@@ -224,18 +227,23 @@ theme="light"
               />
             </label>
             <label className="block justify-center items-center flex mg-4  antialiased hover:bg-blue-500 border-r-2 p-2 rounded-md bg-transparent border">
-                <BsCloudUpload/>
-            <UploadButton uploader={uploader}
+              <BsCloudUpload />
+              <UploadButton
+                uploader={uploader}
                 options={options}
-                onComplete={(files: React.SetStateAction<string>[]) => files.map((x: React.SetStateAction<string>) => {setAvatar(x.fileUrl)
-                  console.log(x.fileUrl)
-                })}>
-    {({onClick}) =>
-      <button onClick={onClick}>
-       <BsCloudUpload/> Upload a file...
-      </button>
-    }
-  </UploadButton>
+                onComplete={(files: React.SetStateAction<string>[]) =>
+                  files.map((x: React.SetStateAction<string>) => {
+                    setAvatar(x.fileUrl);
+                    console.log(x.fileUrl);
+                  })
+                }
+              >
+                {({ onClick }) => (
+                  <button onClick={onClick}>
+                    <BsCloudUpload /> Upload a file...
+                  </button>
+                )}
+              </UploadButton>
             </label>
             <label className="block">
               <span className="block mb-1 text-xs font-medium text-gray-700">
@@ -247,8 +255,8 @@ theme="light"
                   setRole(e.target.value);
                 }}
               >
-                <option value="user">User</option>
-                <option value="admin">Admin</option>
+                <option value="user">Student</option>
+                <option value="admin">Teacher</option>
               </select>
             </label>
 
@@ -256,7 +264,7 @@ theme="light"
               type="submit"
               className="bg-blue-200 w-full py-3 mt-1 justify-center btn btn-primary"
               value="Register"
-              onClick={()=>submitHandlerRegister()}
+              onClick={() => submitHandlerRegister()}
             />
           </div>
           <div className="space-y-8">

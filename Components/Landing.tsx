@@ -14,7 +14,6 @@ import {FaChalkboardTeacher,FaMobileAlt,FaCloudsmith,FaGitAlt,FaUsb,FaAward,FaAn
 
 export default function Landing() {
   return (
-    <>
       <main>
         <div className="relative pt-16 pb-32 flex content-center  items-center justify-center min-h-screen-75">
           <div
@@ -437,21 +436,21 @@ export default function Landing() {
             </svg>
           </div>
 
-          <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
+          <div className="container mx-auto px-4 lg:pt-24 lg:pb-64 ">
             <div className="flex flex-wrap text-center justify-center">
-              <div className="w-full lg:w-6/12 px-4">
+              <div className="w-full lg:w-6/12 px-4 bg-transparent">
                 <h2 className="text-4xl dark:text-white font-semibold text-white">
                   Build something
                 </h2>
-                <p className="text-lg dark:text-white leading-relaxed mt-4 mb-4 text-blueGray-400">
+                <p className="text-lg dark:text-white leading-relaxed mt-4 mb-4 text-blueGray-400" >
                   Put the potentially record low maximum sea ice extent tihs
                   year down to low ice. According to the National Oceanic and
                   Atmospheric Administration, Ted, Scambos.
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap mt-12 justify-center">
-              <div className="w-full lg:w-3/12 px-4 text-center">
+            <div className="flex flex-wrap mt-12 justify-center space-x-10">
+              <div className="w-full lg:w-3/12 px-4 text-center   border-white  radius-2 border rounded-md	 p-2">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-medal text-xl"><FaAward className="w-32"></FaAward></i>
                 </div>
@@ -465,7 +464,7 @@ export default function Landing() {
                   and experience to meet your needs
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
+              <div className="w-full lg:w-3/12 px-4 text-center  border-white shadow-lg radius-2 border rounded-md	 p-2 mb-16 overflow-y-clip">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-poll text-xl"><FaAngleDoubleUp className="w-2"></FaAngleDoubleUp></i>
                 </div>
@@ -478,7 +477,7 @@ export default function Landing() {
                 We have a clear vision and strategy for expanding our market share and increasing our profitability
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
+              <div className="w-full lg:w-3/12 px-4 text-center  border-white radius-2 border rounded-md	 p-2">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-lightbulb text-xl"><FaUserFriends className="w-36"></FaUserFriends></i>
                 </div>
@@ -563,6 +562,5 @@ export default function Landing() {
           </div>
         </section>
       </main>
-    </>
   );
 }

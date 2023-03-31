@@ -1,12 +1,20 @@
 import React from "react";
 import MUIDataTable from "mui-datatables";
 import Avatar from "@mui/material/Avatar";
+import Link from 'next/link'
 type Props = {};
 
 const linkToImage = (value: string) => {
   return <Avatar variant="rounded" src={value} >
   </Avatar>
 };
+
+const idtoLink = (value: string, rollno: string) => {
+  return <Link href={`/student/${value}` } >
+    {rollno}
+  </Link>
+};
+
 
 interface Data {
   id: string;
@@ -36,7 +44,7 @@ const Table = (props: Props) => {
       id: item.id,
       avatar: linkToImage(item.avatar),
       name: item.name,
-      rollno: item.rollno,
+      rollno: idtoLink(item.id,item.rollno),
       email: item.email,
       percentage: item.percentage,
     };

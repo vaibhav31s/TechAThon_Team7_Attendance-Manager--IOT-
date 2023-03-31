@@ -5,10 +5,10 @@ const saltRounds = 10;
 
 const signup = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const { email, password, name, avatar, role } = req.body;
-    console.log(email, password, name, avatar, role);
-    const roll = "1000";
-
+    const { email, password, name, avatar, role ,rollno} = req.body;
+    console.log(email, password, name, avatar, role,rollno);
+    
+    
     const user = await prisma.user.findUnique({
       where: {
         // @ts-ignore
@@ -19,6 +19,21 @@ const signup = async (req: NextApiRequest, res: NextApiResponse) => {
       res.status(400).json({ message: "Email already exist" });
       return;
     }
+
+    const rooll = await prisma.user.findUnique({
+      where: {
+        // @ts-ignore
+        rollno: rollno,
+      },
+    });
+
+    if(rollno){
+      if (rooll) {
+        res.status(400).json({ message: "Rollno already exist" });
+        return;
+      }
+    }
+
     hash(password, saltRounds, async (err, hash) => {
       if (err) {
         res.status(500).json({ message: "Internal server error" });
@@ -31,7 +46,7 @@ const signup = async (req: NextApiRequest, res: NextApiResponse) => {
           name: name,
           avatar: avatar,
           role: role,
-          rollno: roll,
+          rollno: rollno,
         },
       });
       res.status(200).json(newUser);
