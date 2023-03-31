@@ -12,8 +12,8 @@ const getattendance = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       const { sdate, edate , name, email, avatar,subject, rollno} = req.body;
       const startDate = new Date('2000-01-01');
-      const endDate = new Date();
-      var nextHour = getNextHour(endDate);
+      const endDate = getNextHour(new Date());
+      // var nextHour = getNextHour(endDate);
        
     const siddefault = '6425de68fd38788230c30f6b';
     

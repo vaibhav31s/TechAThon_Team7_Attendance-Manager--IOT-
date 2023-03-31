@@ -7,6 +7,11 @@ const getNextHour = (date: Date) => {
   return nextHour;
 };
 
+const getNextDay = (date: Date) => {
+  const nextDay = new Date(date);
+  nextDay.setDate(nextDay.getDate() + 1);
+  return nextDay;
+};
 
 const getattendance = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
@@ -14,7 +19,8 @@ const getattendance = async (req: NextApiRequest, res: NextApiResponse) => {
 
 
       const startDate = new Date('2000-01-01');
-      const endDate = new Date();
+      const endDate = getNextDay(new Date());
+      console.log("Start Date ", endDate);
       const siddefault = '6425de68fd38788230c30f6b';
       
       // console.log("Roll " , rollno);
@@ -55,7 +61,7 @@ const getattendance = async (req: NextApiRequest, res: NextApiResponse) => {
     },
     });
 
-    const thirdTotalLecture = await prisma.attendance.count({
+    const thirdTotalLecture = await prisma.attendance.count({ 
       where: {
         AND: [
             { date: { gte: startDate } },
@@ -156,14 +162,14 @@ const getattendance = async (req: NextApiRequest, res: NextApiResponse) => {
         });
           // console.log("Hello ",allLecures, firstLecuresAll, secondTotalLecture, thirdTotalLecture, forthTotalLecture, mytotalLecture, firstTotalPresent, secondTotalPresent, thirdTotalPresent, forthTotalPresent);
 
-          const allpercent = (mytotalLecture/allLecures)*100;
+          let allpercent = (mytotalLecture/allLecures)*100;
           const firstpercent = (firstTotalPresent/firstLecuresAll)*100;
           const secondpercent = (secondTotalPresent/secondTotalLecture)*100;
           const thirdpercent = (thirdTotalPresent/thirdTotalLecture)*100;
           const forthpercent = (forthTotalPresent/forthTotalLecture)*100;
 
-
-
+          allpercent=    allpercent.toFixed(2);
+        
             res.status(200).json({ message: "Attendance fetched", allpercent, firstpercent, secondpercent, thirdpercent, forthpercent ,allLecures, firstLecuresAll, secondTotalLecture, thirdTotalLecture, forthTotalLecture, mytotalLecture, firstTotalPresent, secondTotalPresent, thirdTotalPresent, forthTotalPresent});
         
     } catch (err) {

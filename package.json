@@ -40,6 +40,7 @@
     "next": "13.2.4",
     "next-auth": "^4.20.1",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-csv": "^2.2.2",
     "react-datepicker": "^4.10.0",
     "react-dom": "18.2.0",
@@ -47,7 +48,8 @@
     "react-linechart": "^1.1.9",
     "react-toastify": "^9.1.2",
     "react-uploader": "^3.13.0",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "victory": "^36.6.8"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
