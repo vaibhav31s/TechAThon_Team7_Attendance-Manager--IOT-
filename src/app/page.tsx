@@ -3,6 +3,8 @@ import React from "react";
 import { useSession, signOut } from "next-auth/react";
 import Landing from "@/Components/Landing";
 import { useRouter } from "next/navigation";
+import Loading from "./student/loading";
+import Footer from "@/Components/Footer/Footer";
 // import Landing from "@/Components/Landing";
 type Props = {};
 
@@ -18,16 +20,13 @@ const Hello = (props: Props) => {
     }
 
     return (
-      <div>
-        <p>Signed in as {session?.user?.role}</p>
-
-        <button onClick={() => signOut()}> Sign Out</button>
-       
-      </div>
+      <Loading/>
     );
   }
   return <div>
       <Landing/>
+      
+      <Footer />
     </div>;
 };
 

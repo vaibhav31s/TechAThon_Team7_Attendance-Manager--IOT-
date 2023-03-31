@@ -20,14 +20,9 @@ const sidebarItems = [
     icon: AiOutlineHome,
   },
   {
-    name: "Teacher",
-    href: "/teacher",
-    icon: BsPeople,
-  },
-  {
     name: "Students",
     href: "/teacher/students",
-    icon: FiMail,
+    icon: BsPeople,
   },
   {
     name: "Manual Attendance",

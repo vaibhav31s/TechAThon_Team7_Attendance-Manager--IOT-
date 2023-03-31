@@ -93,7 +93,7 @@ const BID  = ({ params }: any) => {
 
 
     return (
-    <div>{bid} 
+    <div>
     <div className="justify-center items-center ">
       <div className="flex flex-col items-center ">
         <img

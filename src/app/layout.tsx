@@ -4,7 +4,6 @@ import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 import { Roboto } from "next/font/google";
 import Navbar from "@/Components/Navbar2";
-import Footer from "@/Components/Footer/Footer";
 
 
 const roboto = Roboto({
@@ -32,7 +31,6 @@ export default function RootLayout({
           <div className="container">
             {children}
           </div>
-          <Footer />
         </SessionProvider>
         
       </body>

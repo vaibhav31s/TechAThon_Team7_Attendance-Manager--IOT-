@@ -2,7 +2,7 @@
 import React,{useEffect,useState} from "react";
 import { useSession, signOut } from "next-auth/react";
 import { MdEmail, MdVerified } from "react-icons/md";
-
+import Footer from "@/Components/Footer/Footer";
 import Image from "next/image";
 import Loading from "./loading";
 type Props = {};
@@ -223,7 +223,10 @@ const StudentHome = (props: Props) => {
     </div>
   </div>
 
+
+  <Footer />
   </div>
+
 )
 };
 
