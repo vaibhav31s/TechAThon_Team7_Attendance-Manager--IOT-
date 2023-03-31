@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import Link from "next/link";
@@ -39,17 +41,39 @@ const Login = (props: Props) => {
         email,
         password,
         redirect: false,
+      })
+      .then((res) => {
+        toast.error('Three is issue between your Password Or Email!', {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       });
 
-      console.log(data);
+    
     } catch (error) {
-      console.log(error);
+      toast.error('Three is issue between your Password Or Email!', {
+        position: "bottom-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
   };
 
   const [count, setCount] = React.useState(0);
   return (
     <section className="bg-purple-900 dark:bg-black ">
+   
       <div className="px-0 py-1 mx-auto max-w-7xl sm:px-4">
         <div className="w-full px-4 pt-5 pb-6 mx-auto mt-8 mb-6 bg-white rounded-none shadow-xl sm:rounded-lg sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12 sm:px-6">
           <h1 className="mb-4 text-lg font-semibold text-left text-gray-900">
@@ -84,7 +108,18 @@ const Login = (props: Props) => {
                 }}
               />
             </label>
-
+            <ToastContainer
+position="bottom-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
             <input
               type="submit"
               className="bg-blue-200 w-full py-3 mt-1 justify-center btn btn-primary"

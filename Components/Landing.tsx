@@ -3,23 +3,25 @@ import React from "react";
 import Link from "next/link";
 // components
 
-import person1 from "assets/img/team-1-800x800.jpg";
+import person1 from "assets/img/team-1-800x800.jpeg";
 import person2 from "assets/img/team-2-800x800.jpg";
 import person3 from "assets/img/team-3-800x800.jpg";
-import person4 from "assets/img/team-4-470x470.png";
-
-
+import person4 from "assets/img/team-4-800x800.png";
+import lapptop from "assets/img/laptop.jpg"
+import backg from "assets/img/.png"
+import Rajohari from "assets/img/Rajoharan.jpg"
+import {FaChalkboardTeacher,FaMobileAlt,FaCloudsmith,FaGitAlt,FaUsb,FaAward,FaAngleDoubleUp,FaUserFriends } from "react-icons/fa";
 
 export default function Landing() {
   return (
     <>
       <main>
-        <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+        <div className="relative pt-16 pb-32 flex content-center  items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')",
+                "url('https://cdn.dribbble.com/users/992274/screenshots/13875723/media/ef1ef2ba7197586690ab66851ba8c36b.png')",
             }}
           >
             <span
@@ -32,12 +34,12 @@ export default function Landing() {
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    Your story starts with us.
+                    Say Goodbye to Paperwork, Hello to QuickCheck Tech.
                   </h1>
-                  <p className="mt-4 text-lg text-blueGray-200">
-                    This is a simple example of a Landing Page you can build
-                    using Notus React. It features multiple CSS components based
-                    on the Tailwind CSS design system.
+                  <p className="mt-4 text-lg text-gray-100">
+                    Trusted by 1700+ Schools for
+                    Attendance management, Leave management,
+                    & day-to-day services.
                   </p>
                 </div>
               </div>
@@ -71,27 +73,26 @@ export default function Landing() {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                      <i className="fas fa-award"></i>
+                      <i className="fas fa-award"><FaGitAlt className="w-36"></FaGitAlt></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Awarded Agency</h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Divide details about your product or agency work into
-                      parts. A paragraph describing a feature will be enough.
-                    </p>
+                    <h6 className="text-xl  text-blueGray-500 font-semibold">World Class Company</h6>
+                    <p className="mt-2 mb-4 text-center text-blueGray-500">
+                      We have made a great product that meets the highest standards of quality and excellence.
+                       Being innovative and adaptable helps in delivering quality products that meet customer needs</p>
                   </div>
                 </div>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 text-center">
+              <div className="w-full md:w-4/12 px-4  text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                      <i className="fas fa-retweet"></i>
+                    <div className="text-white p-3 bg-gray-400 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full">
+                      <i className="fas fa-retweet "><FaCloudsmith className="w-32 "></FaCloudsmith></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Free Revisions</h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Keep you user engaged by providing meaningful information.
-                      Remember that by this time, the user is curious.
+                    <h6 className="text-xl font-semibold">Less Resources</h6>
+                    <p className="mt-2 mb-4 text-center text-blueGray-500">
+                      Usage of our machine will have great results in saving papers.
+                      A lot of manual work has been reduced and its easy and fast to use.
                     </p>
                   </div>
                 </div>
@@ -101,12 +102,12 @@ export default function Landing() {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                      <i className="fas fa-fingerprint"></i>
+                      <i className="fas fa-fingerprint"><FaUsb className="w-36"></FaUsb></i>
                     </div>
-                    <h6 className="text-xl font-semibold">Verified Company</h6>
-                    <p className="mt-2 mb-4 text-blueGray-500">
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough. Keep you user engaged!
+                    <h6 className="text-xl font-semibold">Verified Product</h6>
+                    <p className="mt-2 mb-4 text-center text-blueGray-500">
+                      Our Product has been through various security checking and accuracy testing and we have an outperformed results.
+                      help in reducing risks of fraud and costs incurred from incorrect information provided by customers.
                     </p>
                   </div>
                 </div>
@@ -116,23 +117,23 @@ export default function Landing() {
             <div className="flex flex-wrap items-center mt-32">
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                  <i className="fas fa-user-friends text-xl"></i>
+                  <i className="fas fa-user-friends text-xl "><FaChalkboardTeacher className="w-36" ></FaChalkboardTeacher></i>
                 </div>
-                <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                  Working with us is a pleasure
+                <h3 className="dark:text-white text-3xl mb-2 font-semibold leading-normal">
+                  Punctuality benchmarks
                 </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                  Don't let your uses guess by attaching tooltips and popoves to
-                  any element. Just make sure you enable them first via
-                  JavaScript.
+                <p className="text-lg dark:text-white  font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+
+
+                  A stitch in time, (almost) always saves nine. Therefore, we want to help you maintain punctuality at work.
+                   We make it possible for you to do it via grace hours or grace late-counts.
+                  You can not only monitor but also penalize repeat late-comers.
                 </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
-                  The kit comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go. Just make sure you enable them first via
-                  JavaScript.
+                <p className="text-lg dark:text-white font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
+                A punctuality benchmark is a standard or goal that an individual or organization 
+                sets for themselves to ensure that they are prompt and attend appointments on time
                 </p>
-                <Link href="/" className="font-bold text-blueGray-700 mt-8">
+                <Link href="/" className="font-bold dark:text-white text-blueGray-700 mt-8 dark:text-white">
                   Check Notus React!
                 </Link>
               </div>
@@ -141,7 +142,7 @@ export default function Landing() {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-lightBlue-500">
                   <img
                     alt="..."
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+                    src={lapptop.src}
                     className="w-full align-middle rounded-t-lg"
                   />
                   <blockquote className="relative p-8 mb-4">
@@ -156,13 +157,11 @@ export default function Landing() {
                         className="text-lightBlue-500 fill-current"
                       ></polygon>
                     </svg>
-                    <h4 className="text-xl font-bold text-white">
+                    <h4 className="text-xl  font-bold text-black">
                       Top Notch Services
                     </h4>
-                    <p className="text-md font-light mt-2 text-white">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens.
+                    <p className="text-md font-light mt-2  text-black">
+                     We do not only have a good product but we also provide an excellent 12 month gurantee and servicing with
                     </p>
                   </blockquote>
                 </div>
@@ -198,19 +197,18 @@ export default function Landing() {
                 <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
-                  src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  src={Rajohari.src}
                 />
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
-                  <div className="text-lightBlue-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-lightBlue-300">
-                    <i className="fas fa-rocket text-xl"></i>
+                  <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                    <i className="fas fa-rocket text-xl"><FaMobileAlt className="w-36 dark:"> </FaMobileAlt>   </i>
                   </div>
-                  <h3 className="text-3xl font-semibold">A growing company</h3>
-                  <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                    The extension comes with three pre-built pages to help you
-                    get started faster. You can change the text and images and
-                    you're good to go.
+                  <h3 className="text-3xl dark:text-white  font-semibold">Regularization workflow</h3>
+                  <p className="mt-4 text-lg dark:text-white  leading-relaxed text-blueGray-500">
+                  Every now and then, we all forget some of the most basic tasks, no? Avoid the burden of correcting attendance yourself, and instead,
+                   empower employees to request for changes for single or multiple days, through simple regularization workflows.
                   </p>
                   <ul className="list-none mt-6">
                     <li className="py-2">
@@ -221,8 +219,8 @@ export default function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-blueGray-500">
-                            Carefully crafted components
+                          <h4 className="dark:text-white text-blueGray-500">
+                           Skilled Employees
                           </h4>
                         </div>
                       </div>
@@ -235,8 +233,8 @@ export default function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-blueGray-500">
-                            Amazing page examples
+                          <h4 className="dark:text-white text-blueGray-500">
+                      Great User Experience
                           </h4>
                         </div>
                       </div>
@@ -249,7 +247,7 @@ export default function Landing() {
                           </span>
                         </div>
                         <div>
-                          <h4 className="text-blueGray-500">
+                          <h4 className="dark:text-white text-blueGray-500">
                             Dynamic components
                           </h4>
                         </div>
@@ -266,11 +264,10 @@ export default function Landing() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">Here are our heroes</h2>
-                <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record maximum.
+                <h2 className="text-4xl dark:text-white font-semibold">Here are our heroes</h2>
+                <p className="text-lg leading-relaxed m-4 dark:text-white text-blueGray-500">
+                  It is because of them that we are able to manufacture and design this great product.
+                  They are the torch-bearers of this company 
                 </p>
               </div>
             </div>
@@ -283,25 +280,25 @@ export default function Landing() {
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Ryan Tompson</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                    <h5 className="text-xl dark:text-zinc-300 font-bold">Sagar Agicha</h5>
+                    <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
                       Web Developer
                     </p>
                     <div className="mt-6">
                       <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-lightBlue-400 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
+                      > <i className="fab dark:text-white fa-twitter"></i></button>
+                        {/* <i className="fab dark:text-white fa-twitter"><FaCloudsmith className="w-36"></FaCloudsmith></i> */}
+                     
                       <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-lightBlue-600 dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-facebook-f"></i>
                       </button>
                       <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-pink-500 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-dribbble"></i>
@@ -318,8 +315,8 @@ export default function Landing() {
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Romina Hadid</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                    <h5 className="text-xl dark:text-zinc-300 font-bold">Vaibhav Gawad</h5>
+                    <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
                       Marketing Specialist
                     </p>
                     <div className="mt-6">
@@ -347,25 +344,25 @@ export default function Landing() {
                     className="shadow-lg rounded-full mx-auto max-w-120-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Alexa Smith</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                    <h5 className="text-xl dark:text-zinc-300 font-bold">Jenil Shah</h5>
+                    <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
                       UI/UX Designer
                     </p>
                     <div className="mt-6">
                       <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-red-600 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-google"></i>
                       </button>
                       <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-lightBlue-400 dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
                       </button>
                       <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-blueGray-700 dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-instagram"></i>
@@ -379,34 +376,34 @@ export default function Landing() {
                   <img
                     alt="..."
                     src={person4.src}
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                    className="shadow-lg rounded-full mx-auto w-800-px"
                   />
                   <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Jenna Kardi</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                    <h5 className="text-xl dark:text-zinc-300 font-bold">Ritesh Mestry</h5>
+                    <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
                       Founder and CEO
                     </p>
                     <div className="mt-6">
                       <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-pink-500 dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-dribbble"></i>
                       </button>
                       <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-red-600 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-google"></i>
                       </button>
                       <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-lightBlue-400 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
                       </button>
                       <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-blueGray-700  dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                       >
                         <i className="fab fa-instagram"></i>
@@ -443,10 +440,10 @@ export default function Landing() {
           <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
             <div className="flex flex-wrap text-center justify-center">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold text-white">
+                <h2 className="text-4xl dark:text-white font-semibold text-white">
                   Build something
                 </h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
+                <p className="text-lg dark:text-white leading-relaxed mt-4 mb-4 text-blueGray-400">
                   Put the potentially record low maximum sea ice extent tihs
                   year down to low ice. According to the National Oceanic and
                   Atmospheric Administration, Ted, Scambos.
@@ -455,39 +452,42 @@ export default function Landing() {
             </div>
             <div className="flex flex-wrap mt-12 justify-center">
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-medal text-xl"></i>
+                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                  <i className="fas fa-medal text-xl"><FaAward className="w-32"></FaAward></i>
                 </div>
-                <h6 className="text-xl mt-5 font-semibold text-white">
+                <h6 className="text-xl dark:text-white  mt-5 font-semibold dark:text-white">
                   Excelent Services
                 </h6>
-                <p className="mt-2 mb-4 text-blueGray-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                <p className="mt-2 dark:text-white text-left mb-4 dark:text-white text-blueGray-400">
+                We offer competitive prices, high-quality work, and timely delivery.
+                 Whether you need web design, graphic design,
+                  content writing, or marketing, we have the skills 
+                  and experience to meet your needs
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-poll text-xl"></i>
+                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                  <i className="fas fa-poll text-xl"><FaAngleDoubleUp className="w-2"></FaAngleDoubleUp></i>
                 </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
-                  Grow your market
+                <h5 className="text-xl dark:text-white  mt-5 font-semibold text-black">
+                  Market Growth 
                 </h5>
-                <p className="mt-2 mb-4 text-blueGray-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                <p className="mt-2 dark:text-white text-left mb-4 text-blueGray-400">
+                We have a proven track record of delivering high-quality products and services to our customers
+                Our growth rate is impressive and consistent, averaging 25% annually for the last five years
+                We have a clear vision and strategy for expanding our market share and increasing our profitability
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-xl"></i>
+                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                  <i className="fas fa-lightbulb text-xl"><FaUserFriends className="w-36"></FaUserFriends></i>
                 </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
-                  Launch time
+                <h5 className="text-xl dark:text-white  mt-5 font-semibold text-black">
+                  Easy to Use 
                 </h5>
-                <p className="mt-2 mb-4 text-blueGray-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                <p className="mt-2 dark:text-white mb-4 text-left text-blueGray-400">
+                  It revolutionize the way you work and play!. You can easily power up your productivity with our tech!.
+                  Streamline your day-to-day harsh activities with our intuitive products!
                 </p>
               </div>
             </div>
@@ -499,58 +499,58 @@ export default function Landing() {
               <div className="w-full lg:w-6/12 px-4">
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
                   <div className="flex-auto p-5 lg:p-10">
-                    <h4 className="text-2xl font-semibold">
+                    <h4 className="text-2xl dark:text-white  font-semibold">
                       Want to work with us?
                     </h4>
-                    <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
+                    <p className="leading-relaxed dark:text-white mt-1 mb-4 text-blueGray-500">
                       Complete this form and we will get back to you in 24
                       hours.
                     </p>
                     <div className="relative w-full mb-3 mt-8">
                       <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        className="block uppercase dark:text-white  text-blueGray-600 text-xs font-bold mb-2"
                         htmlFor="full-name"
                       >
                         Full Name
                       </label>
                       <input
                         type="text"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        className="border-0 px-3 py-3 dark:text-white  placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         placeholder="Full Name"
                       />
                     </div>
 
                     <div className="relative w-full mb-3">
                       <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        className="block uppercase text-blueGray-600 dark:text-white  text-xs font-bold mb-2"
                         htmlFor="email"
                       >
                         Email
                       </label>
                       <input
                         type="email"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        className="border-0 dark:text-white  px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         placeholder="Email"
                       />
                     </div>
 
                     <div className="relative w-full mb-3">
                       <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        className="block uppercase dark:text-white  text-blueGray-600 text-xs font-bold mb-2"
                         htmlFor="message"
                       >
                         Message
                       </label>
                       <textarea
-                        rows="4"
-                        cols="80"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                        rows= "4"
+                        cols= "80"
+                        className="border-0 px-3 py-3 dark:text-white  placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                         placeholder="Type a message..."
                       />
                     </div>
                     <div className="text-center mt-6">
                       <button
-                        className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="bg-blueGray-800 dark:text-white  text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                       >
                         Send Message

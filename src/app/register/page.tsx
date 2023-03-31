@@ -1,5 +1,9 @@
 "use client";
 import React from "react";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {BsCloudUpload} from 'react-icons/bs';
 import { useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import Link from "next/link";
@@ -27,6 +31,7 @@ const Register = (props: Props) => {
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("https://api.multiavatar.com/vaibhav");
   const [role, setRole] = useState("");
+  const [rollno, setRollno] = useState("");
   const images:string[] = [];
 
 
@@ -44,9 +49,47 @@ const Register = (props: Props) => {
           password, 
           avatar,
           role,
+          rollno,
         }),
-      }); 
+      }).then((res) => {
+        if (res.status === 200) {
+          toast.success('Thank you for registering with us! You can sign it using your creadentials or Google auth!!', {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        } else {
+          toast.error('Three is issue between your Password Or Email!', {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
+      });
+      
+     
       console.log(signup);
+      // toast.success('Thank you for registering with us! You can sign it using your creadentials or Google auth!!', {
+      //   position: "bottom-center",
+      //   autoClose: 5000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "light",
+      //   });
+
     } catch (error) {
       console.log(error);
     }
@@ -95,6 +138,18 @@ const Register = (props: Props) => {
   return (
     <section className="bg-purple-900 dark:bg-black ">
       <div className="px-0 mx-auto py-1 max-w-7xl sm:px-4">
+      <ToastContainer
+position="bottom-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
         <div className="w-full px-4 pt-5 pb-6 mx-auto mt-8 mb-6 bg-white rounded-none shadow-xl sm:rounded-lg sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12 sm:px-6">
           <h1 className="mb-4 text-lg font-semibold text-left text-gray-900">
             Log in to your account
@@ -111,6 +166,20 @@ const Register = (props: Props) => {
                 required
                 onChange={(e) => {
                   setName(e.target.value);
+                }}
+              />
+            </label>
+            <label className="block">
+              <span className="block mb-1 text-xs font-medium text-gray-700">
+                Your Rollno
+              </span>
+              <input
+                className="form-input "
+                type="text"
+                placeholder="Ex. 1 2 3 4 5 6 7 8 9"
+                required
+                onChange={(e) => {
+                  setRollno(e.target.value);
                 }}
               />
             </label>
@@ -154,7 +223,8 @@ const Register = (props: Props) => {
                 required
               />
             </label>
-            <label className="block">
+            <label className="block justify-center items-center flex mg-4  antialiased hover:bg-blue-500 border-r-2 p-2 rounded-md bg-transparent border">
+                <BsCloudUpload/>
             <UploadButton uploader={uploader}
                 options={options}
                 onComplete={(files: React.SetStateAction<string>[]) => files.map((x: React.SetStateAction<string>) => {setAvatar(x.fileUrl)
@@ -162,7 +232,7 @@ const Register = (props: Props) => {
                 })}>
     {({onClick}) =>
       <button onClick={onClick}>
-        Upload a file...
+       <BsCloudUpload/> Upload a file...
       </button>
     }
   </UploadButton>
