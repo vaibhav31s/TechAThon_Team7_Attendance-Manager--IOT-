@@ -59,7 +59,7 @@ const makeAttendance = async (req: NextApiRequest, res: NextApiResponse) => {
       // console.log(attendance);
     }
     if(marked){
-      res.status(200).json("Done with some errors");
+      res.status(200).json("Allready Present");
     }else
     res.status(200).json("done");
   } catch (err) {
