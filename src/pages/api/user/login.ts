@@ -18,6 +18,7 @@ const login = async (req: NextApiRequest, res: NextApiResponse) => {
         avatar: true,
         email: true,
         password: true,
+        rollno: true,
       },
     });
     

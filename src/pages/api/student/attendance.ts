@@ -10,44 +10,162 @@ const getNextHour = (date: Date) => {
 
 const getattendance = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
-      const { sdate, edate , name, email, avatar } = req.body;
+      const { rollno, email, avatar } = req.body;
+
+
       const startDate = new Date('2000-01-01');
       const endDate = new Date();
       const siddefault = '6425de68fd38788230c30f6b';
-    
+      
+      // console.log("Roll " , rollno);
+
     //subject wise attendance
-    const allStudents = await prisma.attendance.count({
+    const allLecures = await prisma.attendance.count({
         where: {
             AND: [
                 { date: { gte: startDate } },
                 { date: { lte: endDate } },
-                {subject:'AIDS'}
+                
             ],
             studentId :siddefault
         },
     });
 
-    const countsidattendace = await prisma.attendance.count({
+    const firstLecuresAll = await prisma.attendance.count({
+      where: {
+        AND: [
+            { date: { gte: startDate } },
+            { date: { lte: endDate } },
+            
+        ],
+        studentId :siddefault,
+        subject: "AIDS",
+    },
+    });
+
+    const secondTotalLecture = await prisma.attendance.count({
+      where: {
+        AND: [
+            { date: { gte: startDate } },
+            { date: { lte: endDate } },
+            
+        ],
+        studentId :siddefault,
+        subject: "WT",
+    },
+    });
+
+    const thirdTotalLecture = await prisma.attendance.count({
+      where: {
+        AND: [
+            { date: { gte: startDate } },
+            { date: { lte: endDate } },
+            
+        ],
+        studentId :siddefault,
+        subject: "DMBI",
+    },
+    });
+    const forthTotalLecture = await prisma.attendance.count({
+      where: {
+        AND: [
+            { date: { gte: startDate } },
+            { date: { lte: endDate } },
+            
+        ],
+        studentId :siddefault,
+        subject: "WEBX",
+    },
+    });
+
+    //student wise attendance
+    const sid = await prisma.user.findMany({
+        select: {
+            id: true,
+        },
         where: {
+            rollno : rollno,
+        }
+    });
+
+    if(sid.length == 0){
+        res.status(200).json({ message: "No student found" });
+        return;
+      }
+
+
+      // console.log("Hello ",sid[0].id);
+    
+    const mytotalLecture = await prisma.attendance.count({
+        where: {
+          
             AND: [  
                 { date: { gte: startDate } },
                 { date: { lte: endDate } },
-               
-            ], studentId: '6425852ba9e5259a2ed5089a'
-          }
-        } 
-        );
+            ], 
+            studentId : sid[0].id,
+
+          },
+        });
+
+
+        // console.log("Hello ",mytotalLecture, allLecures);
+
+         const firstTotalPresent = await prisma.attendance.count({
+            where: {
+              AND: [
+                { date: { gte: startDate } },
+                { date: { lte: endDate } },
+              ],
+              studentId: sid[0].id,
+              subject: "AIDS",
+            },
+          });
+
+          
+         const secondTotalPresent = await prisma.attendance.count({
+          where: {
+            AND: [
+              { date: { gte: startDate } },
+              { date: { lte: endDate } },
+            ],
+            studentId: sid[0].id,
+            subject: "WT",
+          },
+        });
+
+        const thirdTotalPresent= await prisma.attendance.count({
+          where: {
+            AND: [
+              { date: { gte: startDate } },
+              { date: { lte: endDate } },
+            ],
+            studentId: sid[0].id,
+            subject: "DMBI",
+          },
+        });
+        const forthTotalPresent = await prisma.attendance.count({
+          where: {
+            AND: [
+              { date: { gte: startDate } },
+              { date: { lte: endDate } },
+            ],
+            studentId: sid[0].id,
+            subject: "WEBX",
+          },
+        });
+          // console.log("Hello ",allLecures, firstLecuresAll, secondTotalLecture, thirdTotalLecture, forthTotalLecture, mytotalLecture, firstTotalPresent, secondTotalPresent, thirdTotalPresent, forthTotalPresent);
+
+          const allpercent = (mytotalLecture/allLecures)*100;
+          const firstpercent = (firstTotalPresent/firstLecuresAll)*100;
+          const secondpercent = (secondTotalPresent/secondTotalLecture)*100;
+          const thirdpercent = (thirdTotalPresent/thirdTotalLecture)*100;
+          const forthpercent = (forthTotalPresent/forthTotalLecture)*100;
+
+
+
+            res.status(200).json({ message: "Attendance fetched", allpercent, firstpercent, secondpercent, thirdpercent, forthpercent ,allLecures, firstLecuresAll, secondTotalLecture, thirdTotalLecture, forthTotalLecture, mytotalLecture, firstTotalPresent, secondTotalPresent, thirdTotalPresent, forthTotalPresent});
         
-
-
-
-        const ans = (countsidattendace / allStudents) * 100;
-        console.log(ans);
-        
-
-
-
-        res.status(200).json(allStudents);
     } catch (err) {
       console.log(err);
       res.status(500).json({ message: "Internal server error" });
@@ -61,9 +179,10 @@ export default async function handler(
   const method = req.method;
   switch (method) {
     case "GET":
-        getattendance(req, res);
+        // getattendance(req, res);
       break;
     case "POST":
+      getattendance(req, res);
       break;
     case "PATCH":
       break;
