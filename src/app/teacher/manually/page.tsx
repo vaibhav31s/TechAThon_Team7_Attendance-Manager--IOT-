@@ -1,7 +1,8 @@
 
 'use client'
 import React from 'react'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 type Props = {}
 
 
@@ -30,13 +31,51 @@ const Manually = (props: Props) => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            if(data === 'done') {
+              toast.success('Successfully Marked Student as Present !! ', {
+                position: "bottom-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+
+            } else {
+              toast.info(data, {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+            }
+
         }
         )
     }
 
   return (
     <div className="container mx-auto">
+      
     <div className="max-w-md mx-auto mt-8 bg-white p-8 rounded-lg shadow-md">
+    <ToastContainer
+position="bottom-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
       <div className="mb-4">
         <label htmlFor="date" className="block text-gray-700 font-bold mb-2">Date:</label>
         <input type="datetime-local" id="date" name="date" value={date} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

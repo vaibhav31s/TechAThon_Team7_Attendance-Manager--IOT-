@@ -4,6 +4,14 @@ import { m } from "framer-motion";
 
 const getStudents = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
+    const siddefault = '6425de68fd38788230c30f6b';
+    const totalLectures = await prisma.attendance.count({
+      where: {
+        studentId: siddefault,
+      }});
+
+
+
     const allStudents = await prisma.user.findMany({
       select: {
         id: true,
@@ -11,12 +19,33 @@ const getStudents = async (req: NextApiRequest, res: NextApiResponse) => {
         name: true,
         rollno: true,
         email: true,
+        
+
       },
       where: {
         role: "user",
       },
     });
-    res.status(200).json(allStudents);
+
+    const allStudentsWithAttendance = await Promise.all(
+      allStudents.map(async (student) => {  
+        const totalPresent = await prisma.attendance.count({
+          where: {
+            studentId: student.id,
+          },
+        });
+        const percentage = (totalPresent / totalLectures) * 100;
+        return {
+          ...student,
+          totalPresent,
+          percentage,
+        };
+      })
+    );
+        
+
+
+    res.status(200).json(allStudentsWithAttendance);
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Internal server error" });

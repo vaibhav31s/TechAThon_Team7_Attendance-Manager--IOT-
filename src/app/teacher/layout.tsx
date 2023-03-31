@@ -1,5 +1,5 @@
 "use client";
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 import Sidebar from "@/Components/Sidebar/Sidebar";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";

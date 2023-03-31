@@ -2,7 +2,7 @@
 
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 import Navbar from "@/Components/Navbar2";
 import Footer from "@/Components/Footer/Footer";
 

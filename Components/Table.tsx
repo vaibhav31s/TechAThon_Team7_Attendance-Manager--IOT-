@@ -8,9 +8,18 @@ const linkToImage = (value: string) => {
   </Avatar>
 };
 
+interface Data {
+  id: string;
+  avatar: string;
+  name: string;
+  rollno: string;
+  email: string;
+  percentage: string;
+}
+
 const Table = (props: Props) => {
 
-
+   const [data, setData] = React.useState<Data[]>([]);
   fetch("/api/teacher/students", {
     method: "GET",
     headers: {
@@ -19,9 +28,19 @@ const Table = (props: Props) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      setData(data);
     });
 
+  const dataaa = data.map((item) => {
+    return {  
+      id: item.id,
+      avatar: linkToImage(item.avatar),
+      name: item.name,
+      rollno: item.rollno,
+      email: item.email,
+      percentage: item.percentage,
+    };
+  });
 
 
   const dataa = [
@@ -60,7 +79,7 @@ const Table = (props: Props) => {
   ];
 
 
-  const columns = [ "rollno","avatar", "name", "email","Attendance"];
+  const columns = [ "rollno","avatar", "name", "email","percentage"];
 
   // const data = [
   //   ["Joe James", "Test Corp", "Yonkers", "NY"],
@@ -76,7 +95,7 @@ const Table = (props: Props) => {
   return (
       <MUIDataTable
         title={"Student Details "}
-        data={dataa}
+        data={dataaa}
         columns={columns}
         options={options}
       />

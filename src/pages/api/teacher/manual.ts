@@ -5,7 +5,7 @@ const makeAttendance = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { date, status, rollno, subject } = req.body;
     console.log(date, status, rollno, subject);
-
+    let marked = false;
     const datas = rollno.split(",");
     console.log(datas);
 
@@ -38,6 +38,7 @@ const makeAttendance = async (req: NextApiRequest, res: NextApiResponse) => {
 
       if (check.length > 0) {
         console.log("already present");
+        marked = true;
         continue;
       }
 
@@ -57,7 +58,9 @@ const makeAttendance = async (req: NextApiRequest, res: NextApiResponse) => {
       });
       // console.log(attendance);
     }
-
+    if(marked){
+      res.status(200).json("Done with some errors");
+    }else
     res.status(200).json("done");
   } catch (err) {
     console.log(err);
