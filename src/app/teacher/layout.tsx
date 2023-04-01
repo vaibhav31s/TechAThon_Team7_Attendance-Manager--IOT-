@@ -31,7 +31,7 @@ export default function RootLayout({
     <div className="layouts">
       <Sidebar />
       <div className="layout__main-contents">
-        <h1>Path :{path?.toString()}</h1>
+        <h1 className="dark:text-white">Path :{path?.toString()}</h1>
 
         {children}
       </div>

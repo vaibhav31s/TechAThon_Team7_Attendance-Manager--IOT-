@@ -29,6 +29,11 @@ const sidebarItems = [
     href: "/teacher/manually",
     icon: TiContacts,
   },
+  // {
+  //   name:"Calendar",
+  //   href : "/teacher/calendar",
+  //   icon: TiContacts
+  // }
 ];
 
 const Sidebar = () => {

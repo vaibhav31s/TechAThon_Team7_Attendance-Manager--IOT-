@@ -76,7 +76,7 @@ const Login = (props: Props) => {
           <div className="md:w-2/3 px-2 md:px-2 sm:w-screen">
           <h1 className="text-4xl antialiased font-bold dark:text-white pb-2">
               Welcome to QuickCheckTech
-            </h1> <h1 className="mb-4 text-lg font-semibold text-left text-gray-900">
+            </h1> <h1 className="mb-4 text-lg font-semibold text-left dark:text-white  text-gray-900">
               Log in to your account
             </h1>
             <form className="mb-8 space-y-4" onSubmit={submitHandler}>
@@ -146,15 +146,15 @@ const Login = (props: Props) => {
                 </a>
               </div>
             </div>
-          <p className="mb-4  text-xs text-center text-gray-400">
+          <p className="mb-4  text-xs text-center text-black  ">
             <Link
               href="/register"
-              className="text-purple-200 underline hover:text-white"
+              className="text-black dark:text-white underline hover:text-black"
             >
               Create an account
             </Link>
             · ·
-            <a href="#" className="text-purple-200 underline hover:text-white">
+            <a href="#" className="text-black dark:text-white underline hover:text-white">
               Privacy & Terms
             </a>
           </p>

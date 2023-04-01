@@ -14,7 +14,7 @@ import {FaChalkboardTeacher,FaMobileAlt,FaCloudsmith,FaGitAlt,FaUsb,FaAward,FaAn
 
 export default function Landing() {
   return (
-      <main className="layout__main-contents">
+      <main className="container">
         <div className="relative pt-16 pb-32 flex content-center  items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
@@ -30,12 +30,12 @@ export default function Landing() {
           </div>
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
-              <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+              <div className="w-full lg:w-9/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
                     Say Goodbye to Paperwork, Hello to QuickCheck Tech.
                   </h1>
-                  <p className="mt-4 text-lg text-gray-100">
+                  <p className="mt-4 text-lg text-blueGray-200">
                     Trusted by 1700+ Schools for
                     Attendance management, Leave management,
                     & day-to-day services.
@@ -281,28 +281,9 @@ export default function Landing() {
                   <div className="pt-6 text-center">
                     <h5 className="text-xl dark:text-zinc-300 font-bold">Sagar Agicha</h5>
                     <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
-                      Web Developer
+                      Hardware/IOT 
                     </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-lightBlue-400 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      > <i className="fab dark:text-white fa-twitter"></i></button>
-                        {/* <i className="fab dark:text-white fa-twitter"><FaCloudsmith className="w-36"></FaCloudsmith></i> */}
-                     
-                      <button
-                        className="bg-lightBlue-600 dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button>
-                      <button
-                        className="bg-pink-500 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                    </div>
+                 
                   </div>
                 </div>
               </div>
@@ -316,22 +297,9 @@ export default function Landing() {
                   <div className="pt-6 text-center">
                     <h5 className="text-xl dark:text-zinc-300 font-bold">Vaibhav Gawad</h5>
                     <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
-                      Marketing Specialist
+                      FullStack Developer
                     </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button>
-                    </div>
+               
                   </div>
                 </div>
               </div>
@@ -345,28 +313,9 @@ export default function Landing() {
                   <div className="pt-6 text-center">
                     <h5 className="text-xl dark:text-zinc-300 font-bold">Jenil Shah</h5>
                     <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
-                      UI/UX Designer
+                      WEB DEVELOPER
                     </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-red-600 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-400 dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-blueGray-700 dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
-                    </div>
+                   
                   </div>
                 </div>
               </div>
@@ -380,34 +329,9 @@ export default function Landing() {
                   <div className="pt-6 text-center">
                     <h5 className="text-xl dark:text-zinc-300 font-bold">Ritesh Mestry</h5>
                     <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
-                      Founder and CEO
+                      IOT/ML
                     </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-pink-500 dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                      <button
-                        className="bg-red-600 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-400 dark:text-white  text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-blueGray-700  dark:text-white text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
-                    </div>
+                
                   </div>
                 </div>
               </div>
@@ -454,7 +378,7 @@ export default function Landing() {
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-medal text-xl"><FaAward className="w-32"></FaAward></i>
                 </div>
-                <h6 className="text-xl dark:text-white  mt-5 font-semibold dark:text-white">
+                <h6 className="text-xl  mt-5 font-semibold text-white">
                   Excelent Services
                 </h6>
                 <p className="mt-2 dark:text-white text-left mb-4 dark:text-white text-blueGray-400">
@@ -468,7 +392,7 @@ export default function Landing() {
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-poll text-xl"><FaAngleDoubleUp className="w-2"></FaAngleDoubleUp></i>
                 </div>
-                <h5 className="text-xl dark:text-white  mt-5 font-semibold text-black">
+                <h5 className="text-xl   mt-5 font-semibold text-white  ">
                   Market Growth 
                 </h5>
                 <p className="mt-2 dark:text-white text-left mb-4 text-blueGray-400">
@@ -481,7 +405,7 @@ export default function Landing() {
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-lightbulb text-xl"><FaUserFriends className="w-36"></FaUserFriends></i>
                 </div>
-                <h5 className="text-xl dark:text-white  mt-5 font-semibold text-black">
+                <h5 className="text-xl dark:text-white  mt-5 font-semibold text-white">
                   Easy to Use 
                 </h5>
                 <p className="mt-2 dark:text-white mb-4 text-left text-blueGray-400">

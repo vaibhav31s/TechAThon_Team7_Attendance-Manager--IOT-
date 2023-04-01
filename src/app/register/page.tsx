@@ -240,7 +240,7 @@ const Register = (props: Props) => {
               >
                 {({ onClick }) => (
                   <button onClick={onClick}>
-                    <BsCloudUpload /> Upload a file...
+                     Upload Your Profile picture...
                   </button>
                 )}
               </UploadButton>
@@ -288,15 +288,15 @@ const Register = (props: Props) => {
             </div>
           </div>
         </div>
-        <p className="mb-4  text-xs text-center text-gray-400">
+        <p className="mb-4  text-xs text-center text-black dark:text-purpl">
           <Link
             href="/login"
-            className="text-purple-200 underline hover:text-white"
+            className=" underline hover:text-blue-700"
           >
             Have An Account ? Login
           </Link>
           · ·
-          <a href="#" className="text-purple-200 underline hover:text-white">
+          <a href="#" className=" underline hover:text-blue-700">
             Privacy & Terms
           </a>
         </p>

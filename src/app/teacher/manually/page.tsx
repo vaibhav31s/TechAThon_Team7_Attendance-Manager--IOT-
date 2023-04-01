@@ -55,7 +55,11 @@ const Manually = (props: Props) => {
 
   return (
     <div className="container mx-auto">
-      <div className="max-w-md mx-auto mt-8 bg-white p-8 rounded-lg shadow-md">
+      <h1 className="font-bold text-center dark:bg-white">Manual Attendance Portal Where Teacher can take manual Attendace in case of failure in device</h1>
+        
+      <div className="max-w-md mx-auto mt-8 dark:text-white p-8 rounded-lg shadow-md">
+      <h1 className="font-bold text-center dark:text-white">Manual Attendance Taker</h1>
+        
         <ToastContainer
           position="bottom-center"
           autoClose={5000}
@@ -106,7 +110,7 @@ const Manually = (props: Props) => {
             htmlFor="studentId"
             className="block text-gray-700 font-bold mb-2"
           >
-            Roll no :
+            Roll no : (To have multiple attendance Done Quickly Just add commas after each roll no. Eg. 1,2,3,4,6)
           </label>
           <input
             type="text"
@@ -149,10 +153,6 @@ const Manually = (props: Props) => {
           </button>
         </div>
       </div>
-      {date}
-      {subject}
-      {rollno}
-      {status}
     </div>
   );
 };

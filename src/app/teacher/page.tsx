@@ -151,7 +151,7 @@ const TeacherDashboard = (props: Props) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col mt-10">
+          <div className="flex flex-col mt-10 dark:text-white">
             <div className="flex items-center justify-between">
               <span className="font-bold text-xl">Students Activity</span>
               <span className="text-xs bg-gray-200 hover:bg-gray-500 text-gray-500 hover:text-gray-200 px-2 py-1 rounded-lg transition duration-200 cursor-default">
