@@ -15,6 +15,11 @@ const idtoLink = (value: string, rollno: string) => {
   </Link>
 };
 
+const toEdit = (value: string) => {
+  return <Link href={`/student/${value}/edit` } >
+    Edit
+  </Link>
+};
 
 interface Data {
   id: string;
@@ -28,6 +33,7 @@ interface Data {
 const Table = (props: Props) => {
 
    const [data, setData] = React.useState<Data[]>([]);
+  React.useEffect(() => {
   fetch("/api/teacher/students", {
     method: "GET",
     headers: {
@@ -38,6 +44,7 @@ const Table = (props: Props) => {
     .then((data) => {
       setData(data);
     });
+  }, []);
 
   const dataaa = data.map((item) => {
     return {  
@@ -47,6 +54,7 @@ const Table = (props: Props) => {
       rollno: idtoLink(item.id,item.rollno),
       email: item.email,
       percentage: item.percentage,
+      edit: toEdit(item.id),
     };
   });
 
@@ -87,7 +95,7 @@ const Table = (props: Props) => {
   ];
 
 
-  const columns = [ "rollno","avatar", "name", "email","percentage"];
+  const columns = [ "rollno","avatar", "name", "email","percentage",'edit'];
 
   // const data = [
   //   ["Joe James", "Test Corp", "Yonkers", "NY"],
