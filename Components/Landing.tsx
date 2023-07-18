@@ -14,385 +14,477 @@ import {FaChalkboardTeacher,FaMobileAlt,FaCloudsmith,FaGitAlt,FaUsb,FaAward,FaAn
 
 export default function Landing() {
   return (
-    <section className="text-black body-font lg:pt-20">
-    <div className="container px-5 pt-32 mx-auto lg:px-4 lg:py-4">
-      <div className="flex flex-col w-full mb-2 text-left md:text-center ">
-        <h1 className="mb-2 text-6xl font-bold tracking-tighter text-white lg:text-8xl md:text-7xl">
-          <span>We are making </span>
-          <br className="hidden lg:block"></br>
-          Stunning websites
-        </h1>
-        <br></br>
-        <p className="mx-auto  text-xl font-normal leading-relaxed text-gray-600 dark:text-gray-300 lg:w-2/3">
-          nine4 is a free to use template website for websites made with{" "}
-          <a href="https://nextjs.org/" className="underline">
-            Next.js
-          </a>{" "}
-          and styled with Tailwind CSS
-        </p>
-      </div>
-    </div>
-    <div className="container flex flex-col items-center justify-center py-8 mx-auto rounded-lg md:p-1 p-3">
-      <img
-        className="object-cover object-center w-full mb-10 border-gray-200 dark:border-gray-900 g327 border rounded-lg shadow-md"
-        alt="hero"
-        src="./images/placeholder.png"
-      ></img>
-    </div>
-    <section className="text-gray-600 body-font">
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-10 mx-auto">
-          <div className="flex flex-wrap -m-4 text-center">
-            <div className="p-4 sm:w-1/3 w-1/2">
-              <h2 className="title-font font-medium sm:text-5xl text-3xl text-white">
-                {/* <CountUp end={940} redraw={true}>
-                  {({ countUpRef, start }) => (
-                    <VisibilitySensor onChange={start} delayedCall>
-                      <span ref={countUpRef} />
-                    </VisibilitySensor>
-                  )}
-                </CountUp> */}
-              </h2>
-              <p className="leading-relaxed">Users</p>
+      <main className="container">
+        <div className="relative pt-16 pb-32 flex content-center  items-center justify-center min-h-screen-75">
+          <div
+            className="absolute top-0 w-full h-full bg-center bg-cover"
+            style={{
+              backgroundImage:
+                "url('https://cdn.dribbble.com/users/992274/screenshots/13875723/media/ef1ef2ba7197586690ab66851ba8c36b.png')",
+            }}
+          >
+            <span
+              id="blackOverlay"
+              className="w-full h-full absolute opacity-75 bg-black"
+            ></span>
+          </div>
+          <div className="container relative mx-auto">
+            <div className="items-center flex flex-wrap">
+              <div className="w-full lg:w-9/12 px-4 ml-auto mr-auto text-center">
+                <div className="pr-12">
+                  <h1 className="text-white font-semibold text-5xl">
+                    Say Goodbye to Paperwork, Hello to QuickCheck Tech.
+                  </h1>
+                  <p className="mt-4 text-lg text-blueGray-200">
+                    Trusted by 1700+ Schools for
+                    Attendance management, Leave management,
+                    & day-to-day services.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="p-4 sm:w-1/3 w-1/2">
-              <h2 className="title-font font-medium sm:text-5xl text-3xl text-white">
-                {/* <CountUp end={740} redraw={true}>
-                  {({ countUpRef, start }) => (
-                    <VisibilitySensor onChange={start} delayedCall>
-                      <span ref={countUpRef} />
-                    </VisibilitySensor>
-                  )}
-                </CountUp> */}
-              </h2>
-              <p className="leading-relaxed">Subscribes</p>
-            </div>
-            <div className="p-4 sm:w-1/3 w-1/2">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-white">
-                {/* <CountUp end={315} redraw={true}>
-                  {({ countUpRef, start }) => (
-                    <VisibilitySensor onChange={start} delayedCall>
-                      <span ref={countUpRef} />
-                    </VisibilitySensor>
-                  )}
-                </CountUp> */}
-              </h2>
-              <p className="leading-relaxed">Downloads</p>
-            </div>
+          </div>
+          <div
+            className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
+            style={{ transform: "translateZ(0)" }}
+          >
+            <svg
+              className="absolute bottom-0 overflow-hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              version="1.1"
+              viewBox="0 0 2560 100"
+              x="0"
+              y="0"
+            >
+              <polygon
+                className="text-blueGray-200 fill-current"
+                points="2560 0 2560 100 0 100"
+              ></polygon>
+            </svg>
           </div>
         </div>
-      </section>
-      <div className="container px-5 py-24 mx-auto flex flex-wrap">
-        <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-          <img
-            alt="feature"
-            className="object-cover object-center h-full w-full"
-            src="./images/placeholder.png"
-          ></img>
-        </div>
-        <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-          <div className="flex flex-col mb-10 lg:items-start items-center">
-            <div className="flex-grow">
-              <h2 className="text-white text-2xl title-font font-medium mb-3">
-                Free
-              </h2>
-              <p className="leading-relaxed text-lg">
-                All of our templates are 100% free forever.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col mb-10 lg:items-start items-center">
-            <div className="flex-grow">
-              <h2 className="text-white text-2xl title-font font-medium mb-3">
-                Responsive
-              </h2>
-              <p className="leading-relaxed text-lg">
-                All our templates come with full responsiveness straight out
-                of the box.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col mb-10 lg:items-start items-center">
-            <div className="flex-grow">
-              <h2 className="text-white text-2xl title-font font-medium mb-3">
-                SEO Friendly
-              </h2>
-              <p className="leading-relaxed text-lg">
-                Our templates have the best SEO practices ensuring you get to
-                the top.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col mb-10 lg:items-start items-center">
-            <div className="flex-grow">
-              <h2 className="text-white text-2xl title-font font-medium mb-3">
-                Fast
-              </h2>
-              <p className="leading-relaxed text-lg">
-                The fastest websites you can get.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col mb-10 lg:items-start items-center">
-            <div className="flex-grow">
-              <h2 className="text-white text-2xl title-font font-medium mb-3">
-                Google Analytics Supported
-              </h2>
-              <p className="leading-relaxed text-lg">
-                All our templates come with full support for Google Analytics.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section className="text-gray-600 body-font">
-      <div className="container px-5 mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="sm:text-5xl font-medium title-font text-white mb-4">
-            Our Team
-          </h2>
-          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
-            Here is our company
-          </p>
-          <div className="flex mt-6 justify-center">
-            <div className="w-16 h-1 rounded-full bg-white inline-flex"></div>
-          </div>
-          <div className="container px-5 py-16 mx-auto">
-            <div className="flex flex-wrap -m-4">
-              <div className="p-4 lg:w-1/4 md:w-1/2">
-                <div className="h-full flex flex-col items-center text-center">
-                  <img
-                    alt="team"
-                    className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                    src="./images/placeholder.png"
-                  ></img>
-                  <div className="w-full">
-                    <h2 className="title-font font-medium text-lg text-white">
-                      Chris
-                    </h2>
-                    <h3 className="text-gray-500 mb-3">Web Developer</h3>
-                    <p className="mb-4">
-                      Chris is part of our front-end team providing amazing
-                      websites.
-                    </p>
-                    <span className="inline-flex">
-                      <a className="text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                        </svg>
-                      </a>
-                      <a className="ml-2 text-white">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                        </svg>
-                      </a>
-                      <a className="ml-2 text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                        </svg>
-                      </a>
-                    </span>
+
+        <section className="pb-20 bg-blueGray-200 -mt-24">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap">
+              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                  <div className="px-4 py-5 flex-auto">
+                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                      <i className="fas fa-award"><FaGitAlt className="w-36"></FaGitAlt></i>
+                    </div>
+                    <h6 className="text-xl  text-blueGray-500 font-semibold">World Class Company</h6>
+                    <p className="mt-2 mb-4 text-center text-blueGray-500">
+                      We have made a great product that meets the highest standards of quality and excellence.
+                       Being innovative and adaptable helps in delivering quality products that meet customer needs</p>
                   </div>
                 </div>
               </div>
-              <div className="p-4 lg:w-1/4 md:w-1/2">
-                <div className="h-full flex flex-col items-center text-center">
-                  <img
-                    alt="team"
-                    className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                    src="./images/placeholder.png"
-                  ></img>
-                  <div className="w-full">
-                    <h2 className="title-font font-medium text-lg text-white">
-                      Chris
-                    </h2>
-                    <h3 className="text-gray-500 mb-3">Web Developer</h3>
-                    <p className="mb-4">
-                      Chris is part of our front-end team providing amazing
-                      websites.
+
+              <div className="w-full md:w-4/12 px-4  text-center">
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                  <div className="px-4 py-5 flex-auto">
+                    <div className="text-white p-3 bg-gray-400 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full">
+                      <i className="fas fa-retweet "><FaCloudsmith className="w-32 "></FaCloudsmith></i>
+                    </div>
+                    <h6 className="text-xl font-semibold">Less Resources</h6>
+                    <p className="mt-2 mb-4 text-center text-blueGray-500">
+                      Usage of our machine will have great results in saving papers.
+                      A lot of manual work has been reduced and its easy and fast to use.
                     </p>
-                    <span className="inline-flex">
-                      <a className="text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                        </svg>
-                      </a>
-                      <a className="ml-2 text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                        </svg>
-                      </a>
-                      <a className="ml-2 text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                        </svg>
-                      </a>
-                    </span>
                   </div>
                 </div>
               </div>
-              <div className="p-4 lg:w-1/4 md:w-1/2">
-                <div className="h-full flex flex-col items-center text-center">
-                  <img
-                    alt="team"
-                    className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                    src="./images/placeholder.png"
-                  ></img>
-                  <div className="w-full">
-                    <h2 className="title-font font-medium text-lg text-white">
-                      Chris
-                    </h2>
-                    <h3 className="text-gray-500 mb-3">Web Developer</h3>
-                    <p className="mb-4">
-                      Chris is part of our front-end team providing amazing
-                      websites.
+
+              <div className="pt-6 w-full md:w-4/12 px-4 text-center">
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                  <div className="px-4 py-5 flex-auto">
+                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
+                      <i className="fas fa-fingerprint"><FaUsb className="w-36"></FaUsb></i>
+                    </div>
+                    <h6 className="text-xl font-semibold">Verified Product</h6>
+                    <p className="mt-2 mb-4 text-center text-blueGray-500">
+                      Our Product has been through various security checking and accuracy testing and we have an outperformed results.
+                      help in reducing risks of fraud and costs incurred from incorrect information provided by customers.
                     </p>
-                    <span className="inline-flex">
-                      <a className="text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                        </svg>
-                      </a>
-                      <a className="ml-2 text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                        </svg>
-                      </a>
-                      <a className="ml-2 text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                        </svg>
-                      </a>
-                    </span>
                   </div>
                 </div>
               </div>
-              <div className="p-4 lg:w-1/4 md:w-1/2">
-                <div className="h-full flex flex-col items-center text-center">
+            </div>
+
+            <div className="flex flex-wrap items-center mt-32">
+              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                  <i className="fas fa-user-friends text-xl "><FaChalkboardTeacher className="w-36" ></FaChalkboardTeacher></i>
+                </div>
+                <h3 className="dark:text-white text-3xl mb-2 font-semibold leading-normal">
+                  Punctuality benchmarks
+                </h3>
+                <p className="text-lg dark:text-white  font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+
+
+                  A stitch in time, (almost) always saves nine. Therefore, we want to help you maintain punctuality at work.
+                   We make it possible for you to do it via grace hours or grace late-counts.
+                  You can not only monitor but also penalize repeat late-comers.
+                </p>
+                <p className="text-lg dark:text-white font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
+                A punctuality benchmark is a standard or goal that an individual or organization 
+                sets for themselves to ensure that they are prompt and attend appointments on time
+                </p>
+                <Link href="/" className="font-bold dark:text-white text-blueGray-700 mt-8 dark:text-white">
+                  Check Notus React!
+                </Link>
+              </div>
+
+              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-lightBlue-500">
                   <img
-                    alt="team"
-                    className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                    src="./images/placeholder.png"
-                  ></img>
-                  <div className="w-full">
-                    <h2 className="title-font font-medium text-lg text-white">
-                      Chris
-                    </h2>
-                    <h3 className="text-gray-500 mb-3">Web Developer</h3>
-                    <p className="mb-4">
-                      Chris is part of our front-end team providing amazing
-                      websites.
+                    alt="..."
+                    src={lapptop.src}
+                    className="w-full align-middle rounded-t-lg"
+                  />
+                  <blockquote className="relative p-8 mb-4">
+                    <svg
+                      preserveAspectRatio="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 583 95"
+                      className="absolute left-0 w-full block h-95-px -top-94-px"
+                    >
+                      <polygon
+                        points="-30,95 583,95 583,65"
+                        className="text-lightBlue-500 fill-current"
+                      ></polygon>
+                    </svg>
+                    <h4 className="text-xl  font-bold text-black">
+                      Top Notch Services
+                    </h4>
+                    <p className="text-md font-light mt-2  text-black">
+                     We do not only have a good product but we also provide an excellent 12 month gurantee and servicing with
                     </p>
-                    <span className="inline-flex">
-                      <a className="text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                        </svg>
-                      </a>
-                      <a className="ml-2 text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                        </svg>
-                      </a>
-                      <a className="ml-2 text-gray-500">
-                        <svg
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          className="w-5 h-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                        </svg>
-                      </a>
-                    </span>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="relative py-20">
+          <div
+            className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
+            style={{ transform: "translateZ(0)" }}
+          >
+            <svg
+              className="absolute bottom-0 overflow-hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              version="1.1"
+              viewBox="0 0 2560 100"
+              x="0"
+              y="0"
+            >
+              <polygon
+                className="text-white fill-current"
+                points="2560 0 2560 100 0 100"
+              ></polygon>
+            </svg>
+          </div>
+
+          <div className="container mx-auto px-4">
+            <div className="items-center flex flex-wrap">
+              <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
+                <img
+                  alt="..."
+                  className="max-w-full rounded-lg shadow-lg"
+                  src={Rajohari.src}
+                />
+              </div>
+              <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
+                <div className="md:pr-12">
+                  <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                    <i className="fas fa-rocket text-xl"><FaMobileAlt className="w-36 dark:"> </FaMobileAlt>   </i>
+                  </div>
+                  <h3 className="text-3xl dark:text-white  font-semibold">Regularization workflow</h3>
+                  <p className="mt-4 text-lg dark:text-white  leading-relaxed text-blueGray-500">
+                  Every now and then, we all forget some of the most basic tasks, no? Avoid the burden of correcting attendance yourself, and instead,
+                   empower employees to request for changes for single or multiple days, through simple regularization workflows.
+                  </p>
+                  <ul className="list-none mt-6">
+                    <li className="py-2">
+                      <div className="flex items-center">
+                        <div>
+                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-lightBlue-600 bg-lightBlue-200 mr-3">
+                            <i className="fas fa-fingerprint"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <h4 className="dark:text-white text-blueGray-500">
+                           Skilled Employees
+                          </h4>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="py-2">
+                      <div className="flex items-center">
+                        <div>
+                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-lightBlue-600 bg-lightBlue-200 mr-3">
+                            <i className="fab fa-html5"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <h4 className="dark:text-white text-blueGray-500">
+                      Great User Experience
+                          </h4>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="py-2">
+                      <div className="flex items-center">
+                        <div>
+                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-lightBlue-600 bg-lightBlue-200 mr-3">
+                            <i className="far fa-paper-plane"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <h4 className="dark:text-white text-blueGray-500">
+                            Dynamic components
+                          </h4>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="pt-20 pb-48">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center text-center mb-24">
+              <div className="w-full lg:w-6/12 px-4">
+                <h2 className="text-4xl dark:text-white font-semibold">Here are our heroes</h2>
+                <p className="text-lg leading-relaxed m-4 dark:text-white text-blueGray-500">
+                  It is because of them that we are able to manufacture and design this great product.
+                  They are the torch-bearers of this company 
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap">
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src={person1.src}
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl dark:text-zinc-300 font-bold">Sagar Agicha</h5>
+                    <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
+                      Hardware/IOT 
+                    </p>
+                 
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src={person2.src}
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl dark:text-zinc-300 font-bold">Vaibhav Gawad</h5>
+                    <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
+                      FullStack Developer
+                    </p>
+               
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src={person3.src}
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl dark:text-zinc-300 font-bold">Jenil Shah</h5>
+                    <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
+                      WEB DEVELOPER
+                    </p>
+                   
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src={person4.src}
+                    className="shadow-lg rounded-full mx-auto w-800-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl dark:text-zinc-300 font-bold">Ritesh Mestry</h5>
+                    <p className="mt-1 text-sm dark:text-zinc-300 text-blueGray-400 uppercase font-semibold">
+                      IOT/ML
+                    </p>
+                
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  </section>
+        </section>
+
+        <section className="pb-20 relative block bg-blueGray-800">
+          <div
+            className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
+            style={{ transform: "translateZ(0)" }}
+          >
+            <svg
+              className="absolute bottom-0 overflow-hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              version="1.1"
+              viewBox="0 0 2560 100"
+              x="0"
+              y="0"
+            >
+              <polygon
+                className="text-blueGray-800 fill-current"
+                points="2560 0 2560 100 0 100"
+              ></polygon>
+            </svg>
+          </div>
+
+          <div className="container mx-auto px-4 lg:pt-24 lg:pb-64 ">
+            <div className="flex flex-wrap text-center justify-center">
+              <div className="w-full lg:w-6/12 px-4 bg-transparent">
+                <h2 className="text-4xl dark:text-white font-semibold text-white">
+                  Build something
+                </h2>
+                <p className="text-lg dark:text-white leading-relaxed mt-4 mb-4 text-blueGray-400" >
+                  Put the potentially record low maximum sea ice extent tihs
+                  year down to low ice. According to the National Oceanic and
+                  Atmospheric Administration, Ted, Scambos.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap mt-12 justify-center space-x-10">
+              <div className="w-full lg:w-3/12 px-4 text-center   border-white  radius-2 border rounded-md	 p-2">
+                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                  <i className="fas fa-medal text-xl"><FaAward className="w-32"></FaAward></i>
+                </div>
+                <h6 className="text-xl  mt-5 font-semibold text-white">
+                  Excelent Services
+                </h6>
+                <p className="mt-2 dark:text-white text-left mb-4 dark:text-white text-blueGray-400">
+                We offer competitive prices, high-quality work, and timely delivery.
+                 Whether you need web design, graphic design,
+                  content writing, or marketing, we have the skills 
+                  and experience to meet your needs
+                </p>
+              </div>
+              <div className="w-full lg:w-3/12 px-4 text-center  border-white shadow-lg radius-2 border rounded-md	 p-2 mb-16 overflow-y-clip">
+                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                  <i className="fas fa-poll text-xl"><FaAngleDoubleUp className="w-2"></FaAngleDoubleUp></i>
+                </div>
+                <h5 className="text-xl   mt-5 font-semibold text-white  ">
+                  Market Growth 
+                </h5>
+                <p className="mt-2 dark:text-white text-left mb-4 text-blueGray-400">
+                We have a proven track record of delivering high-quality products and services to our customers
+                Our growth rate is impressive and consistent, averaging 25% annually for the last five years
+                We have a clear vision and strategy for expanding our market share and increasing our profitability
+                </p>
+              </div>
+              <div className="w-full lg:w-3/12 px-4 text-center  border-white radius-2 border rounded-md	 p-2">
+                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                  <i className="fas fa-lightbulb text-xl"><FaUserFriends className="w-36"></FaUserFriends></i>
+                </div>
+                <h5 className="text-xl dark:text-white  mt-5 font-semibold text-white">
+                  Easy to Use 
+                </h5>
+                <p className="mt-2 dark:text-white mb-4 text-left text-blueGray-400">
+                  It revolutionize the way you work and play!. You can easily power up your productivity with our tech!.
+                  Streamline your day-to-day harsh activities with our intuitive products!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+              <div className="w-full lg:w-6/12 px-4">
+                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
+                  <div className="flex-auto p-5 lg:p-10">
+                    <h4 className="text-2xl dark:text-white  font-semibold">
+                      Want to work with us?
+                    </h4>
+                    <p className="leading-relaxed dark:text-white mt-1 mb-4 text-blueGray-500">
+                      Complete this form and we will get back to you in 24
+                      hours.
+                    </p>
+                    <div className="relative w-full mb-3 mt-8">
+                      <label
+                        className="block uppercase dark:text-white  text-blueGray-600 text-xs font-bold mb-2"
+                        htmlFor="full-name"
+                      >
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        className="border-0 px-3 py-3 dark:text-white  placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        placeholder="Full Name"
+                      />
+                    </div>
+
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase text-blueGray-600 dark:text-white  text-xs font-bold mb-2"
+                        htmlFor="email"
+                      >
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        className="border-0 dark:text-white  px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        placeholder="Email"
+                      />
+                    </div>
+
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase dark:text-white  text-blueGray-600 text-xs font-bold mb-2"
+                        htmlFor="message"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        rows= "4"
+                        cols= "80"
+                        className="border-0 px-3 py-3 dark:text-white  placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                        placeholder="Type a message..."
+                      />
+                    </div>
+                    <div className="text-center mt-6">
+                      <button
+                        className="bg-blueGray-800 dark:text-white  text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
   );
 }
