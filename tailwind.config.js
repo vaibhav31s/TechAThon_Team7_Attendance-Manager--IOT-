@@ -104,38 +104,28 @@ module.exports = {
         {
           [`@media (min-width: ${screens.sm})`]: {
             ".container": {
-              "max-width": "640px",
+              ".container": { width: "100%" },
             },
           },
         },
         {
           [`@media (min-width: ${screens.md})`]: {
             ".container": {
-              "max-width": "768px",
+              ".container": { width: "100%" },
             },
           },
         },
         {
           [`@media (min-width: ${screens.lg})`]: {
-            ".container": {
-              "max-width": "1024px",
-            },
+            ".container": { width: "100%" },
           },
         },
         {
           [`@media (min-width: ${screens.xl})`]: {
-            ".container": {
-              "max-width": "1280px",
-            },
+            ".container": { width: "100%" },
           },
         },
-        {
-          [`@media (min-width: ${screens["2xl"]})`]: {
-            ".container": {
-              "max-width": "1280px",
-            },
-          },
-        },
+
       ]);
     }),
   ],
