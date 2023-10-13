@@ -14,7 +14,7 @@ import {FaChalkboardTeacher,FaMobileAlt,FaCloudsmith,FaGitAlt,FaUsb,FaAward,FaAn
 
 export default function Landing() {
   return (
-      <main className="container">
+      <main className="">
         <div className="relative pt-16 pb-32 flex content-center  items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
@@ -28,7 +28,7 @@ export default function Landing() {
               className="w-full h-full absolute opacity-75 bg-black"
             ></span>
           </div>
-          <div className="container relative mx-auto">
+          <div className=" relative mx-auto">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-9/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
@@ -66,7 +66,7 @@ export default function Landing() {
         </div>
 
         <section className="pb-20 bg-blueGray-200 -mt-24">
-          <div className="container mx-auto px-4">
+          <div className=" mx-auto px-4">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
@@ -190,7 +190,7 @@ export default function Landing() {
             </svg>
           </div>
 
-          <div className="container mx-auto px-4">
+          <div className=" mx-auto px-4">
             <div className="items-center flex flex-wrap">
               <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
                 <img
@@ -259,8 +259,8 @@ export default function Landing() {
           </div>
         </section>
 
-        <section className="pt-20 pb-48">
-          <div className="container mx-auto px-4">
+        {/* <section className="pt-20 pb-48">
+          <div className=" mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl dark:text-white font-semibold">Here are our heroes</h2>
@@ -337,7 +337,7 @@ export default function Landing() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="pb-20 relative block bg-blueGray-800">
           <div
@@ -360,7 +360,7 @@ export default function Landing() {
             </svg>
           </div>
 
-          <div className="container mx-auto px-4 lg:pt-24 lg:pb-64 ">
+          <div className=" mx-auto px-4 lg:pt-24 lg:pb-64 ">
             <div className="flex flex-wrap text-center justify-center">
               <div className="w-full lg:w-6/12 px-4 bg-transparent">
                 <h2 className="text-4xl dark:text-white font-semibold text-white">
@@ -374,7 +374,7 @@ export default function Landing() {
               </div>
             </div>
             <div className="flex flex-wrap mt-12 justify-center space-x-10">
-              <div className="w-full lg:w-3/12 px-4 text-center   border-white  radius-2 border rounded-md	 p-2">
+              <div className="w-full lg:w-3/12 px-4 text-center   pt-10  border border-white  radius-2 shadow-xl rounded-md	 p-2">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-medal text-xl"><FaAward className="w-32"></FaAward></i>
                 </div>
@@ -401,7 +401,7 @@ export default function Landing() {
                 We have a clear vision and strategy for expanding our market share and increasing our profitability
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-4 text-center  border-white radius-2 border rounded-md	 p-2">
+              <div className="w-full lg:w-3/12 px-4 text-center shadow-xl pt-10 border-white radius-2 border rounded-md	 p-2">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                   <i className="fas fa-lightbulb text-xl"><FaUserFriends className="w-36"></FaUserFriends></i>
                 </div>
@@ -416,11 +416,11 @@ export default function Landing() {
             </div>
           </div>
         </section>
-        <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+        <section className="relative block py-24 lg:pt-0 bg-blueGray-800 ">
+          <div className=" mx-auto px-4">
+            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48 ">
               <div className="w-full lg:w-6/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
+                <div className="relative   border dark:border-white flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
                   <div className="flex-auto p-5 lg:p-10">
                     <h4 className="text-2xl dark:text-white  font-semibold">
                       Want to work with us?
@@ -473,7 +473,7 @@ export default function Landing() {
                     </div>
                     <div className="text-center mt-6">
                       <button
-                        className="bg-blueGray-800 dark:text-white  text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="dark:bg-blue-500 bg-blueGray-800 dark:text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                       >
                         Send Message

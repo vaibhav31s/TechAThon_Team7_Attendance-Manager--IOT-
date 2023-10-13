@@ -28,7 +28,7 @@ export default function RootLayout({
       <body>
         <SessionProvider>
           <Navbar />
-          <div className="container">
+          <div className="">
             {children}
           </div>
         </SessionProvider>
