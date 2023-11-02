@@ -7,7 +7,7 @@ const getattendance = async (req: NextApiRequest, res: NextApiResponse) => {
         const { rollno, email, avatar } = req.body;
         console.log(rollno);
         const startDate = new Date('1917-01-01');
-        const endDate = new Date('2022-01-31');
+        const endDate = new Date('2024-01-31');
         const attendance = await prisma.user.findMany({
             select: {
                 id: true,

@@ -6,7 +6,7 @@ const getattendance = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       const { name, email, avatar } = req.body;
       const startDate = new Date('1917-01-01');
-      const endDate = new Date('2022-01-31');
+      const endDate = new Date('2024-01-31');
       const allStudents = await prisma.attendance.findMany({
         where: {
           AND: [
