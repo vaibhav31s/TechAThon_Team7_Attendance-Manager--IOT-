@@ -6,7 +6,7 @@ const getattendance = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       const { name, email, avatar } = req.body;
       const startDate = new Date('2001-01-01');
-      const endDate = new Date('2022-12-31');
+      const endDate = new Date('2024-12-31');
       const allStudents = await prisma.user.count({
         where: {
             role: 'user',
