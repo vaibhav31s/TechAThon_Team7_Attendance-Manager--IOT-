@@ -6,7 +6,6 @@ const saltRounds = 10;
 const login = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { email, password } = req.body;
-    console.log(email,password)
     const user = await prisma.user.findFirst({
       where: {
         // @ts-ignore
@@ -26,9 +25,6 @@ const login = async (req: NextApiRequest, res: NextApiResponse) => {
       res.status(400).json({ message: "User does not exist" });
       return;
     }
-    console.log(email,password, user.password)
-    console.log(typeof(user.password))
-    console.log(typeof(password))
     
     const isMatch = password === user.password;
     console.log(isMatch)

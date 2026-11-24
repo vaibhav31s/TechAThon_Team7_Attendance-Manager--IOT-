@@ -6,7 +6,6 @@ const saltRounds = 10;
 const resetPass = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { email, password } = req.body;
-    console.log(email, password);
     console.log(req.body);
 
     const user = await prisma.user.findFirst({
