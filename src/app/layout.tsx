@@ -20,7 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.className}>
       {/*
-        <head /> will contain the components returned by the nearest parent
+        <head>
+        <title>Attendance Manager</title>
+        <meta name="description" content="This is the app made in TechAthon" />
+        <link rel="icon" href="/favicon.ico" />
+      </head> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />

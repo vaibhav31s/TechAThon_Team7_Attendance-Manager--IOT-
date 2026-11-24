@@ -15,7 +15,7 @@ import { UploadButton } from "react-uploader";
 type Props = {};
 // Initialize once (at the start of your app).
 
-const uploader = Uploader({ apiKey  : "public_12a1yepCxJw5qixaSbh1iZoVCezX" });
+const uploader = Uploader({ apiKey: process.env.NEXT_PUBLIC_UPLOADER_API_KEY ?? "" });
 const options = {
   multi: false,
 

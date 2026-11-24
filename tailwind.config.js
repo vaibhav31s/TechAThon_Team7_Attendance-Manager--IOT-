@@ -4,7 +4,7 @@ const plugin = require("tailwindcss/plugin");
 module.exports = {
   darkMode: "class",
   content: [
-    "./node_modules/flowbite-react/**/*.js",
+    "./node_modules/flowbite-react/dist/**/*.{js,mjs}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "./Components/**/*.{js,ts,jsx,tsx}",
@@ -27,38 +27,11 @@ module.exports = {
   plugins: [
     require("flowbite/plugin"),
     require("@tailwindcss/forms"),
-    plugin(function ({ addComponents, theme }) {
-      const screens = theme("screens", {});
-      addComponents([
-        {
-          ".container": { width: "100%" },
-        },
-        {
-          [`@media (min-width: ${screens.sm})`]: {
-            ".container": { width: "100%" },
-          },
-        },
-        {
-          [`@media (min-width: ${screens.md})`]: {
-            ".container": { width: "100%" },
-          },
-        },
-        {
-          [`@media (min-width: ${screens.lg})`]: {
-            ".container": { width: "100%" },
-          },
-        },
-        {
-          [`@media (min-width: ${screens.xl})`]: {
-            ".container": { width: "100%" },
-          },
-        },
-        {
-          [`@media (min-width: ${screens["2xl"]})`]: {
-            ".container": { width: "100%" },
-          },
-        },
-      ]);
+    require("flowbite-react/plugin/tailwindcss"),
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".container": { width: "100%" },
+      });
     }),
   ],
 };

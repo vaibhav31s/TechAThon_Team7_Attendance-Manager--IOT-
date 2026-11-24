@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Navbar as Nav } from "flowbite-react";
+import { Navbar as Nav, NavbarBrand } from "flowbite-react";
 import MenuDropdown from "./MenuDropdown";
 import Link from "next/link";
 import { useSession , signOut} from "next-auth/react";
@@ -83,12 +83,12 @@ const Navbar = (props: Props) => {
         className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 border-b border-gray-200 dark:border-gray-600"
       >
         <div className="container flex flex-wrap items-center justify-between mx-auto">
-          <Nav.Brand href="/" className="flex items-center cursor-pointer">
+          <NavbarBrand href="/" className="flex items-center cursor-pointer">
             <img  className="h-6  mr-3 sm:h-9" alt="Logo"  src={Logo.src}/>
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               QuickCheck Tech
             </span>
-          </Nav.Brand>
+          </NavbarBrand>
 
           {/* <form onSubmit={handleClick}> */}
           {/* <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm hidden sm:flex sm:space-y-0">

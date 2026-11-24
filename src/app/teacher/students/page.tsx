@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import "flowbite";
 import Table from 'Components/Table';
-import MaterialTable from "material-table";
 import { ThemeProvider, createTheme } from "@mui/material";
 
 import Loading from "./loading";
