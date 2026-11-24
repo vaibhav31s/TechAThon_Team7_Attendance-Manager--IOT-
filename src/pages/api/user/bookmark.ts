@@ -1,6 +1,6 @@
 //@ts-nocheck
 import { NextApiRequest, NextApiResponse } from "next";
-import { prisma } from "../../../utils/db";
+import { prisma, omitPassword } from "../../../utils/db";
 import { compare } from "bcrypt";
 const saltRounds = 10;
 
@@ -30,7 +30,7 @@ const deleteBookmark = async (req: NextApiRequest, res: NextApiResponse) => {
         bookmarks: user.bookmarks,
       },
     });
-    res.status(200).json(updatedUser);
+    res.status(200).json(omitPassword(updatedUser));
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Internal server error" });
@@ -62,7 +62,7 @@ const addBookmark = async (req: NextApiRequest, res: NextApiResponse) => {
       res.status(400).json({ message: "User does not exist" });
       return;
     }
-    res.status(200).json(user);
+    res.status(200).json(omitPassword(user));
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Internal server error" });

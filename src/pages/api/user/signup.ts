@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { prisma } from "../../../utils/db";
+import { prisma, omitPassword } from "../../../utils/db";
 import { hash } from "bcrypt";
 const saltRounds = 10;
 
@@ -48,7 +48,7 @@ const signup = async (req: NextApiRequest, res: NextApiResponse) => {
           rollno: rollno,
         },
       });
-      res.status(200).json(newUser);
+      res.status(200).json(omitPassword(newUser));
     });
   } catch (err) {
     console.log(err);

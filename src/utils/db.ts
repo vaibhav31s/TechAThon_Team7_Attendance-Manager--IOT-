@@ -9,3 +9,11 @@ export const prisma =
   });
 
 if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+
+/** Copy of a user record without the password hash, safe to send to clients. */
+export function omitPassword<T>(user: T): T {
+  if (!user || typeof user !== "object") return user;
+  const copy = { ...(user as Record<string, unknown>) };
+  delete copy.password;
+  return copy as T;
+}
